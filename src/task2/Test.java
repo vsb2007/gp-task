@@ -10,8 +10,11 @@ public class Test {
         String text = "text";
         int alg = 1;
 
-        Encryption encryption = new EncryptionApp(alg).getEncryption();
-        String cryptedText = encryption.crypt(text, key);
+        EncryptionApp encryptionApp = new EncryptionApp(alg);
+        Encryption encryption = encryptionApp != null ? encryptionApp.getEncryption() : null;
+
+        String cryptedText = null;
+        if (encryption != null) cryptedText = encryption.crypt(text, key);
 
     }
 }
