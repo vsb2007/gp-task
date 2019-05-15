@@ -10,7 +10,7 @@ public class EncryptionApp {
     public EncryptionApp(Integer i) {
         if (i == 0) encryption = new DEScrypt();
         if (i == 1) encryption = new RSAcrypt();
-        if (i == 1) encryption = new GOSTcrypt();
+        if (i == 2) encryption = new GOSTcrypt();
     }
 
     public Encryption getEncryption() {
